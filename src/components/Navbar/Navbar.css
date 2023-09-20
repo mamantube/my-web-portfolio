@@ -1,0 +1,86 @@
+.header {
+    background-color: #333; /* Warna latar belakang header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Style for the logo and logo text */
+  .nav-logo {
+    text-decoration: none;
+    color: #fff; /* Warna teks logo */
+    font-size: 24px; /* Ukuran font logo */
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-name {
+    margin-right: 10px;
+  }
+  
+  /* Style for the code icon */
+  .fas.facode {
+    color: #ff5733; /* Warna ikon kode */
+  }
+  
+  /* Style for the navigation menu items */
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-links {
+    text-decoration: none;
+    color: #fff; /* Warna teks menu */
+    font-size: 16px; /* Ukuran font menu */
+    transition: color 0.3s ease; /* Animasi perubahan warna teks */
+  }
+  
+  .nav-links:hover {
+    color: #ff5733; /* Warna teks saat dihover */
+  }
+  
+  /* Style for the mobile menu icon */
+  .nav-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Sembunyikan ikon pada tampilan desktop */
+  }
+  
+  /* Style for the active menu item */
+  .active {
+    font-weight: bold; /* Teks menu aktif lebih tebal */
+  }
+  
+  /* Responsif */
+  @media screen and (max-width: 768px) {
+    .nav-menu {
+      flex-direction: column; /* Menu vertikal pada tampilan mobile */
+      position: absolute;
+      top: 60px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 60px);
+      background-color: #333;
+      transition: left 0.3s ease;
+    }
+  
+    .nav-menu.active {
+      left: 0; /* Munculkan menu saat tombol hamburger diklik */
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+    }
+  
+    .nav-icon {
+      display: block; /* Tampilkan ikon pada tampilan mobile */
+    }
+  }
